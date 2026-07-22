@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thompson/Givens Family Cousins Annual Trip 2027 to Puerto Vallarta, Mexico." />
+  <title>Thompson/Givens Family Cousins Annual Trip 2027</title>
+  <style>
+    :root{
+      --navy:#12324a;
+      --teal:#0f7b6c;
+      --aqua:#4ec7c0;
+      --coral:#f1785b;
+      --sand:#f7eedf;
+      --cream:#fffaf2;
+      --white:#ffffff;
+      --text:#24343f;
+      --shadow:0 18px 45px rgba(18,50,74,.14);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color:var(--text);
+      background:var(--cream);
+      line-height:1.6;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%}
+
+    .hero{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+      color:var(--white);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, rgba(18,50,74,.92), rgba(15,123,108,.82)),
+        linear-gradient(160deg, #0f7b6c, #12324a);
+      padding:90px 20px 70px;
+    }
+
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,255,255,.08);
+    }
+    .hero::before{width:430px;height:430px;right:-120px;top:-100px}
+    .hero::after{width:300px;height:300px;left:-100px;bottom:-90px}
+
+    .wave{
+      position:absolute;
+      bottom:-1px;
+      left:0;
+      width:100%;
+      height:110px;
+      background:var(--cream);
+      clip-path:ellipse(75% 48% at 50% 100%);
+    }
+
+    .hero-content{
+      width:min(1050px, 100%);
+      text-align:center;
+      position:relative;
+      z-index:2;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      padding:9px 15px;
+      border:1px solid rgba(255,255,255,.35);
+      background:rgba(255,255,255,.10);
+      border-radius:999px;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+      font-size:.8rem;
+      font-weight:700;
+      margin-bottom:20px;
+      backdrop-filter:blur(8px);
+    }
+
+    h1{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:clamp(2.7rem, 7vw, 5.7rem);
+      line-height:1.03;
+      margin:0 auto 18px;
+      max-width:950px;
+    }
+
+    .hero-sub{
+      font-size:clamp(1.05rem, 2.4vw, 1.35rem);
+      max-width:760px;
+      margin:0 auto 28px;
+      color:rgba(255,255,255,.92);
+    }
+
+    .hero-meta{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin:26px 0 34px;
+    }
+
+    .pill{
+      padding:12px 18px;
+      border-radius:999px;
+      background:rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.23);
+      font-weight:700;
+      backdrop-filter:blur(8px);
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 24px;
+      border-radius:999px;
+      background:var(--coral);
+      color:white;
+      font-weight:800;
+      box-shadow:0 10px 25px rgba(241,120,91,.32);
+      transition:.25s ease;
+    }
+
+    .btn:hover{transform:translateY(-3px)}
+    .btn.secondary{
+      background:white;
+      color:var(--navy);
+      margin-left:10px;
+    }
+
+    section{padding:85px 20px}
+    .container{width:min(1100px,100%);margin:auto}
+    .section-kicker{
+      color:var(--teal);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.78rem;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+    h2{
+      font-family:Georgia,"Times New Roman",serif;
+      color:var(--navy);
+      font-size:clamp(2rem,4vw,3.2rem);
+      margin:0 0 18px;
+      line-height:1.15;
+    }
+    .lead{
+      max-width:820px;
+      font-size:1.1rem;
+      margin:0 auto;
+    }
+
+    .intro{text-align:center}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+      margin-top:38px;
+    }
+
+    .card{
+      background:white;
+      border-radius:var(--radius);
+      padding:30px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(18,50,74,.06);
+    }
+
+    .card .icon{font-size:2rem;margin-bottom:8px}
+    .card h3{margin:6px 0 8px;color:var(--navy)}
+    .card p{margin:0}
+
+    .story{
+      background:linear-gradient(180deg,var(--sand),#fff7ea);
+    }
+
+    .story-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:42px;
+      align-items:center;
+    }
+
+    .quote-box{
+      background:var(--navy);
+      color:white;
+      padding:40px;
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      position:relative;
+    }
+    .quote-box p{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.45rem;
+      line-height:1.5;
+      margin:0;
+    }
+    .quote-box span{
+      display:block;
+      margin-top:16px;
+      color:rgba(255,255,255,.72);
+      font-size:.95rem;
+    }
+
+    .details{
+      background:var(--white);
+    }
+
+    .details-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:34px;
+    }
+
+    .detail{
+      border-radius:20px;
+      padding:24px;
+      background:var(--cream);
+      border:1px solid #efe3d1;
+      text-align:center;
+    }
+
+    .detail strong{display:block;color:var(--navy);font-size:1.15rem;margin-top:8px}
+
+    .countdown-wrap{
+      background:linear-gradient(135deg,var(--teal),var(--navy));
+      color:white;
+      border-radius:30px;
+      padding:42px 25px;
+      text-align:center;
+      box-shadow:var(--shadow);
+      margin-top:55px;
+    }
+
+    .countdown-wrap h3{font-family:Georgia,serif;font-size:2rem;margin:0 0 18px}
+    .countdown{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      max-width:720px;
+      margin:auto;
+    }
+    .time{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:16px;
+      padding:20px 10px;
+    }
+    .time b{display:block;font-size:2rem}
+    .time span{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+
+    .timeline{
+      position:relative;
+      margin-top:40px;
+      display:grid;
+      gap:18px;
+    }
+    .timeline-item{
+      background:white;
+      border-left:6px solid var(--coral);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:22px 24px;
+    }
+    .timeline-item h3{margin:0 0 5px;color:var(--navy)}
+    .timeline-item p{margin:0}
+
+    .rsvp{
+      background:var(--sand);
+    }
+
+    .rsvp-panel{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      align-items:stretch;
+    }
+
+    .rsvp-copy,
+    .rsvp-form{
+      background:white;
+      border-radius:26px;
+      padding:36px;
+      box-shadow:var(--shadow);
+    }
+
+    form{display:grid;gap:15px}
+    label{font-weight:700;color:var(--navy)}
+    input,select,textarea{
+      width:100%;
+      border:1px solid #d9dfe3;
+      border-radius:12px;
+      padding:13px 14px;
+      font:inherit;
+      background:#fff;
+    }
+    textarea{min-height:110px;resize:vertical}
+    button{
+      border:none;
+      cursor:pointer;
+      font:inherit;
+    }
+
+    .notice{
+      margin-top:14px;
+      font-size:.88rem;
+      color:#667680;
+    }
+
+    .callout{
+      text-align:center;
+      background:var(--coral);
+      color:white;
+      padding:55px 20px;
+    }
+    .callout h2{color:white;margin-bottom:12px}
+    .callout p{max-width:740px;margin:0 auto 22px;font-size:1.08rem}
+
+    footer{
+      background:#0d2536;
+      color:rgba(255,255,255,.78);
+      text-align:center;
+      padding:34px 20px;
+    }
+    footer strong{color:white}
+
+    @media(max-width:850px){
+      .cards,.details-grid{grid-template-columns:repeat(2,1fr)}
+      .story-grid,.rsvp-panel{grid-template-columns:1fr}
+      .btn.secondary{margin-left:0;margin-top:12px}
+    }
+
+    @media(max-width:560px){
+      section{padding:65px 18px}
+      .cards,.details-grid{grid-template-columns:1fr}
+      .countdown{grid-template-columns:repeat(2,1fr)}
+      .hero{padding-top:70px}
+      .card,.rsvp-copy,.rsvp-form{padding:25px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Family • Tradition • Legacy</div>
+      <h1>Thompson/Givens Family Cousins Annual Trip</h1>
+      <p class="hero-sub">
+        Puerto Vallarta, Mexico — four days to reconnect, relax, laugh, celebrate our lineage,
+        and create the kind of memories that become family tradition.
+      </p>
+
+      <div class="hero-meta">
+        <div class="pill">📍 Puerto Vallarta, Mexico</div>
+        <div class="pill">📅 May 13–17, 2027</div>
+        <div class="pill">🌴 All-Inclusive Resort</div>
+        <div class="pill">💵 $1,200 or Less Per Person</div>
+      </div>
+
+      <a class="btn" href="#rsvp">Count Me In</a>
+      <a class="btn secondary" href="#details">View Trip Details</a>
+    </div>
+    <div class="wave"></div>
+  </header>
+
+  <section class="intro">
+    <div class="container">
+      <div class="section-kicker">Why This Matters</div>
+      <h2>We Are Stronger Together</h2>
+      <p class="lead">
+        Being around family this past weekend was a reminder that time moves quickly, and we miss
+        too many meaningful moments when we allow life to keep passing us by. The conversations
+        about our ancestry, our lineage, and the pieces of our family story made one thing clear:
+        a little more cohesion would do us all some good.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon">🤎</div>
+          <h3>Reconnect</h3>
+          <p>Step away from everyday responsibilities and spend real, intentional time together.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🌿</div>
+          <h3>Honor Our Roots</h3>
+          <p>Celebrate the people, stories, sacrifices, and traditions that shaped our family.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📸</div>
+          <h3>Create the Next Chapter</h3>
+          <p>Make memories our children and future generations will hear about for years to come.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="container story-grid">
+      <div>
+        <div class="section-kicker">Our Family Story</div>
+        <h2>Tradition Has Always Kept Us Connected</h2>
+        <p>
+          Tradition is one of the things that has historically tied us together as a people.
+          It gives us a sense of belonging, reminds us where we come from, and teaches us that
+          family is not simply a name—it is a responsibility, a relationship, and a legacy.
+        </p>
+        <p>
+          This annual cousins trip is more than a vacation. It is an opportunity to slow down,
+          enjoy one another, share stories, strengthen relationships, and make togetherness a
+          tradition rather than an occasional event.
+        </p>
+      </div>
+
+      <div class="quote-box">
+        <p>“Our roots give us strength. Our traditions keep us together. Our memories become our legacy.”</p>
+        <span>— Thompson/Givens Family Cousins Annual Trip</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="details" id="details">
+    <div class="container">
+      <div class="section-kicker">Trip at a Glance</div>
+      <h2>Puerto Vallarta 2027</h2>
+      <p>
+        We are planning a warm, relaxing, all-inclusive getaway designed to remain enjoyable and
+        affordable for the family.
+      </p>
+
+      <div class="details-grid">
+        <div class="detail">📍<strong>Puerto Vallarta</strong><span>Mexico</span></div>
+        <div class="detail">📅<strong>May 13–17</strong><span>2027</span></div>
+        <div class="detail">🏝️<strong>All-Inclusive</strong><span>Resort stay</span></div>
+        <div class="detail">💳<strong>$1,200 or Less</strong><span>Target per person</span></div>
+      </div>
+
+      <div class="countdown-wrap">
+        <h3>Countdown to Family Time</h3>
+        <div class="countdown" aria-label="Countdown to May 13, 2027">
+          <div class="time"><b id="days">0</b><span>Days</span></div>
+          <div class="time"><b id="hours">0</b><span>Hours</span></div>
+          <div class="time"><b id="minutes">0</b><span>Minutes</span></div>
+          <div class="time"><b id="seconds">0</b><span>Seconds</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-kicker">What Happens Next</div>
+      <h2>Important Updates Are Coming</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Within the Next Week</h3>
+          <p>The resort selection, deposit amount, payment schedule, deadlines, and travel details will be announced.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Before the End of the Month</h3>
+          <p>We need a final preliminary headcount so that accurate pricing and room availability can be confirmed.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Right Now</h3>
+          <p>Phone a cousin. Text a cousin. Tag a cousin. Make sure no one misses the opportunity simply because they did not hear about it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rsvp" id="rsvp">
+    <div class="container rsvp-panel">
+      <div class="rsvp-copy">
+        <div class="section-kicker">Preliminary Headcount</div>
+        <h2>Let Us Know You’re Interested</h2>
+        <p>
+          This RSVP is for planning purposes and does not yet serve as a final booking or financial
+          commitment. It helps the family planning team estimate attendance, room needs, and pricing.
+        </p>
+        <p>
+          More formal reservation and payment instructions will be shared once the resort and travel
+          arrangements are finalized.
+        </p>
+      </div>
+
+      <div class="rsvp-form">
+        <form id="interestForm">
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your name" required />
+          </div>
+
+          <div>
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required />
+          </div>
+
+          <div>
+            <label for="guests">Estimated Number of Travelers</label>
+            <select id="guests" name="guests" required>
+              <option value="">Select one</option>
+              <option>1 traveler</option>
+              <option>2 travelers</option>
+              <option>3 travelers</option>
+              <option>4 travelers</option>
+              <option>5 or more travelers</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="status">Interest Level</label>
+            <select id="status" name="status" required>
+              <option value="">Select one</option>
+              <option>Yes, count me in</option>
+              <option>Very interested, need final details</option>
+              <option>Maybe, please keep me informed</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">Questions or Notes</label>
+            <textarea id="message" name="message" placeholder="Share any questions, room needs, or travel notes"></textarea>
+          </div>
+
+          <button class="btn" type="submit">Submit Interest</button>
+          <div class="notice" id="formNotice">
+            Demo form: connect this form to Google Forms, Jotform, Formspree, Wix, Squarespace, or your preferred RSVP platform before publishing.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="callout">
+    <div class="container">
+      <h2>Phone a Cousin</h2>
+      <p>
+        Family news travels best when everybody helps carry it. Reach out today and help us bring
+        the Thompson/Givens family together in Puerto Vallarta.
+      </p>
+      <a class="btn secondary" href="#rsvp">Join the Interest List</a>
+    </div>
+  </section>
+
+  <footer>
+    <strong>Thompson/Givens Family Cousins Annual Trip 2027</strong><br />
+    Puerto Vallarta, Mexico • May 13–17, 2027<br /><br />
+    Creating traditions. Strengthening family. Honoring our legacy.
+  </footer>
+
+  <script>
+    const targetDate = new Date("May 13, 2027 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "0";
+        document.getElementById("minutes").textContent = "0";
+        document.getElementById("seconds").textContent = "0";
+        return;
+      }
+
+      document.getElementById("days").textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").textContent = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      document.getElementById("minutes").textContent = Math.floor((distance / (1000 * 60)) % 60);
+      document.getElementById("seconds").textContent = Math.floor((distance / 1000) % 60);
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    document.getElementById("interestForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      document.getElementById("formNotice").textContent =
+        "Thank you" + (name ? ", " + name : "") + "! Your interest has been noted in this demo. Connect the form to an RSVP service before publishing to collect responses.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
