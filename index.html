@@ -281,12 +281,23 @@
       background:var(--sand);
     }
 
-    .rsvp-panel{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:30px;
-      align-items:stretch;
-    }
+   .rsvp-panel{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:36px;
+}
+
+.rsvp-copy{
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.rsvp-form{
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+}
 
     .rsvp-copy,
     .rsvp-form{
@@ -349,6 +360,97 @@
       .hero{padding-top:70px}
       .card,.rsvp-copy,.rsvp-form{padding:25px}
     }
+    /* Google Form styling */
+
+.google-form-card{
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  padding:0;
+  background:#ffffff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(18,50,74,.08);
+}
+
+.google-form-header{
+  padding:32px 30px 24px;
+  text-align:center;
+  background:linear-gradient(135deg, var(--sand), var(--white));
+  border-bottom:1px solid rgba(18,50,74,.08);
+}
+
+.google-form-header h3{
+  margin:12px 0 10px;
+  color:var(--navy);
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:2rem;
+  line-height:1.2;
+}
+
+.google-form-header p{
+  max-width:620px;
+  margin:0 auto;
+  color:var(--text);
+}
+
+.form-badge{
+  display:inline-block;
+  padding:8px 15px;
+  border-radius:999px;
+  background:rgba(15,123,108,.12);
+  color:var(--teal);
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.google-form-frame{
+  width:100%;
+  background:#ffffff;
+  overflow:hidden;
+}
+
+.google-form-frame iframe{
+  display:block;
+  width:100%;
+  min-height:1900px;
+  border:0;
+  background:#ffffff;
+}
+
+.google-form-footer{
+  padding:18px 24px;
+  text-align:center;
+  background:var(--sand);
+  border-top:1px solid rgba(18,50,74,.08);
+}
+
+.google-form-footer p{
+  margin:0;
+  color:#667680;
+  font-size:.9rem;
+}
+
+@media(max-width:768px){
+  .google-form-card{
+    border-radius:18px;
+  }
+
+  .google-form-header{
+    padding:26px 18px 20px;
+  }
+
+  .google-form-header h3{
+    font-size:1.65rem;
+  }
+
+  .google-form-frame iframe{
+    min-height:2050px;
+  }
+}
   </style>
 </head>
 <body>
@@ -478,40 +580,62 @@
       </div>
     </div>
   </section>
+ <section class="rsvp" id="rsvp">
+  <div class="container rsvp-panel">
 
-  <section class="rsvp" id="rsvp">
-    <div class="container rsvp-panel">
-      <div class="rsvp-copy">
-        <div class="section-kicker">Preliminary Headcount</div>
-        <h2>Let Us Know You’re Interested</h2>
-        <p>
-          This RSVP is for planning purposes and does not yet serve as a final booking or financial
-          commitment. It helps the family planning team estimate attendance, room needs, and pricing.
-        </p>
-        <p>
-          More formal reservation and payment instructions will be shared once the resort and travel
-          arrangements are finalized.
-        </p>
-      </div>
+    <div class="rsvp-copy">
+      <div class="section-kicker">Preliminary Headcount</div>
 
-      <div class="rsvp-form">
-       <div class="rsvp-form">
-  <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLScSccftNtimtoYD6IDKgjnPRVRH8QDtUUHSUBaRYtR8P3BWDw/viewform?embedded=true"
-    width="100%"
-    height="1900"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0"
-    style="border: none; background: white; border-radius: 16px;"
-    title="Thompson Family Vacation RSVP Form">
-    Loading…
-  </iframe>
-</div>
-      </div>
+      <h2>Let Us Know You’re Interested</h2>
+
+      <p>
+        This RSVP is for planning purposes and does not yet serve as a final booking or financial
+        commitment. It helps the family planning team estimate attendance, room needs, and pricing.
+      </p>
+
+      <p>
+        More formal reservation and payment instructions will be shared once the resort and travel
+        arrangements are finalized.
+      </p>
     </div>
-  </section>
 
+    <div class="rsvp-form google-form-card">
+
+      <div class="google-form-header">
+        <span class="form-badge">2027 Family Vacation</span>
+
+        <h3>Reserve Your Spot</h3>
+
+        <p>
+          Complete the preliminary interest form below to help us plan rooms,
+          pricing, activities, and travel arrangements.
+        </p>
+      </div>
+
+      <div class="google-form-frame">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScSccftNtimtoYD6IDKgjnPRVRH8QDtUUHSUBaRYtR8P3BWDw/viewform?embedded=true"
+          width="100%"
+          height="1900"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          loading="lazy"
+          title="Thompson Family Vacation RSVP Form">
+          Loading…
+        </iframe>
+      </div>
+
+      <div class="google-form-footer">
+        <p>
+          Your information will be used only for planning the Thompson Family Annual Trip.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
   <section class="callout">
     <div class="container">
       <h2>Phone a Cousin</h2>
